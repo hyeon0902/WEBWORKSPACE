@@ -34,6 +34,12 @@
         <hr>
         <input type="checkbox" v-model="chData" true-value="여" false-value="부">
         <p>{{  chData }}</p>
+        <div>
+            <input type="checkbox" v-model="city" value="서울">
+            <input type="checkbox" v-model="city" value="대전">
+            <input type="checkbox" v-model="city" value="대구">
+        </div>
+        <p>{{ city }}</p>
 </div>
 </template>
 <script>
@@ -47,7 +53,8 @@
                 selected : '',
                 selectModel : 'winter',
                 textModel : '백견불여일타',
-                chData : ''
+                chData : '',
+                city : []
             }
         }
     }
