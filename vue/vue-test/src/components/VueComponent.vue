@@ -1,6 +1,6 @@
 <template>
     <div>
-      <label><input type="text" v-model="msg" /></label>
+      <label><input type="text" v-model="msg" autofocus /></label>
       <p>{{ msg }}</p>
     </div>
   </template>
@@ -14,9 +14,9 @@
     },
   };
   </script>
-  <style>
+  <style scoped>
   p {
-    background-color: aquamarine;
+    background-color: rgb(92, 113, 206);
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
