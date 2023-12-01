@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue';
 import DataBinding from '../views/DataBinding.vue';
 import ListBinding from '../views/ListBinding.vue';
 import IFBinding from '../views/IFBinding.vue';
+import OnEvent from '../views/OnEvent.vue';
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: '/ifBinding',
     name: 'ifBinding',
     component: IFBinding
+  },
+  {
+    path: '/onEvent',
+    name: 'onEvent',
+    component: OnEvent
   }
 ]
 
