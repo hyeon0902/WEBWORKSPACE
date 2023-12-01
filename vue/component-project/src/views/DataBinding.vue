@@ -32,14 +32,25 @@
         <p>{{ selectModel }}</p>
         <textarea v-model="textModel" />
         <hr>
-        <input type="checkbox" v-model="chData" true-value="여" false-value="부">
+        <input type="checkbox" v-model="chData" true-value="여" false-value="남">성별
         <p>{{  chData }}</p>
         <div>
-            <input type="checkbox" v-model="city" value="서울">
-            <input type="checkbox" v-model="city" value="대전">
-            <input type="checkbox" v-model="city" value="대구">
+            <input type="checkbox" v-model="city" value="서울">서울
+            <input type="checkbox" v-model="city" value="대전">대전
+            <input type="checkbox" v-model="city" value="대구">대구
         </div>
         <p>{{ city }}</p>
+        <div>
+            <input type="radio" value="독서" v-model="hobby">독서
+            <input type="radio" value="영화" v-model="hobby">영화
+            <input type="radio" value="운동" v-model="hobby">운동
+            <p>{{  hobby }}</p>
+        </div>
+        <hr>
+        <img v-bind:style="styleData" v-bind:src="imgUrl">
+        <div class="container" v-bind:class="{ active: isActive, 'text-red' : hasError }">Class Binding First</div>
+        <div class="container" v-bind:class="myClass">Class Binding Second</div>
+        <hr>
 </div>
 </template>
 <script>
@@ -54,8 +65,35 @@
                 selectModel : 'winter',
                 textModel : '백견불여일타',
                 chData : '',
-                city : []
+                city : [],
+                hobby : '',
+                imgUrl : 'https://images.pexels.com/photos/46160/field-clouds-sky-earth-46160.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                styleData : {
+                    backgroundColor : 'skyblue',
+                    width : '200px'
+                },
+                isActive : false,
+                //hasError : !this.active,
+                myClass : 'active'
+            }
+        },
+        computed : {
+            hasError(){
+                return !this.isActive
             }
         }
     }
 </script>
+<style scoped>
+ .container{
+    width : 100%;
+    height: 200px;
+ }
+ .active {
+    background-color: aquamarine;
+    font-weight: bold;
+ }
+ .text-red {
+    color : red;
+ }
+</style>
