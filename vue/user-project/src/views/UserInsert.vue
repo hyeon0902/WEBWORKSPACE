@@ -53,8 +53,8 @@ import axios from 'axios';
         data(){
             return {
                 userInfo : {
-                    user_id : '',
-                    user_pwd : '',
+                    user_id : 'test0',
+                    user_pwd : '1234',
                     user_name : null,
                     user_gender : null,
                     user_age : 0,
