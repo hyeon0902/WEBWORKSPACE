@@ -1,8 +1,10 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import mixin from './mixin.js'
+import { createApp } from 'vue';
+import App from './App.vue';
+import mixin from './mixin.js';
+import store from './store.js';
 
 createApp(App)
+.use(store)
 .mixin(mixin)
 .directive('focus',{
     mounted(el, binding, vnode, prevVnode){{

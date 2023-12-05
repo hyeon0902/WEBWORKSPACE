@@ -9,6 +9,7 @@
 import PropsCom from './components/PropsComponent.vue';
 import SlotCom from './components/TextModal.vue';
 import Composition from './components/CompositionInterface.vue';
+import StoreCom from './components/StoreComponent.vue';
 
 export default {
   name : 'app',
@@ -21,7 +22,8 @@ export default {
   components : {
     PropsCom,
     SlotCom,
-    Composition
+    Composition,
+    StoreCom
   }
 }
 </script>
@@ -31,7 +33,6 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
 }
