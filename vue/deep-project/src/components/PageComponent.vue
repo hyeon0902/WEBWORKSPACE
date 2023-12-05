@@ -2,6 +2,9 @@
     <div>
         <table>
             <tr>
+                {{ $dateFormat('2023/12/05', 'yyyy-MM-dd') }}
+            </tr>
+            <tr>
                 <th>제목</th>
                 <td>{{ title }}</td>
                 <th>조회수</th>
@@ -24,8 +27,11 @@
     </div>
 </template>
 <script>
+import AppMixin from '../mixin.js';
+
 export default {
     //props : ['title', 'count', 'writer', 'regdate', 'content']
+    mixins : [AppMixin],
     props : {
         title : String,
         count : {

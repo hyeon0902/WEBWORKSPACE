@@ -7,7 +7,8 @@
 
 <script>
 import PropsCom from './components/PropsComponent.vue';
-import SlotCom from './components/TextModal.vue'
+import SlotCom from './components/TextModal.vue';
+import Composition from './components/CompositionInterface.vue';
 
 export default {
   name : 'app',
@@ -18,7 +19,8 @@ export default {
   },
   components : {
     PropsCom,
-    SlotCom
+    SlotCom,
+    Composition
   }
 }
 </script>
