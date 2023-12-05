@@ -1,6 +1,6 @@
 <template>
   <div>
-    <input type="text" v-model="selected">
+    <input type="text" v-model="selected" v-focus="isFoucsed">
     <component v-bind:is="selected"></component>
   </div>
 </template>
@@ -14,7 +14,8 @@ export default {
   name : 'app',
   data(){
     return {
-      selected : 'PropsCom'
+      selected : 'PropsCom',
+      isFoucsed : false
     }
   },
   components : {
