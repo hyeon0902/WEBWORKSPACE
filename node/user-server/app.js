@@ -11,6 +11,10 @@ app.listen(3000, ()=>{
     console.log('서버 실행');
 })
 
+app.get('/', (req,res)=>{
+    res.sendFile('/dist/index.html');
+})
+
 app.get('/users', async(req, res) => {
     let list = await mysql.query('userList');
     res.send(list);

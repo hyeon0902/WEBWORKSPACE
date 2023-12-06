@@ -61,14 +61,15 @@ export default {
     },
     methods : {
         addCart(){
-            let obj = {
-                product_id : this.productInfo.product_id,
-                product_name : this.productInfo.product_name,
-                category : this.productInfo.category,
-                product_price : this.productInfo.product_price
+                let obj = {
+                    product_id : this.productInfo.product_id,
+                    product_name : this.productInfo.product_name,
+                    category : this.productInfo.category,
+                    product_price : this.productInfo.product_price
+                }
+                //this.$store.commit('addProduct', obj);
+                this.$store.dispatch('addProduct', obj);
             }
-            this.$store.commit('addProduct', obj);
         }
     }
-}
 </script>

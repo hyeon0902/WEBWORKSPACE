@@ -1,6 +1,6 @@
 <template>
   <div>
-    <input type="text" v-model="selected" v-focus="isFoucsed">
+    <input type="text" v-model.lazy="selected" v-focus="isFoucsed">
     <component v-bind:is="selected"></component>
   </div>
 </template>
