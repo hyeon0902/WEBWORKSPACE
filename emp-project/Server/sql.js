@@ -44,6 +44,6 @@ module.exports = {
                       SET ?
                       WHERE emp_no = ?`,
     employeesDelete: `UPDATE dept_emp
-                      SET ?
+                      SET to_date = ?
                       WHERE emp_no = ?`
 }
