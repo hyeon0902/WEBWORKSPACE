@@ -8,6 +8,8 @@ app.use(
   })
 );
 
+app.use(express.urlencoded({ extended: false}));
+
 const server = app.listen(3000, () => {
   console.log("Server started. port 3000.");
 });
@@ -35,7 +37,8 @@ app.put("/boards/:bno", async (request, res) => {
 });
 
 // 해당 게시글의 댓글조회
-app.get("/comments/:bno", async(request , res) => {
-  
+app.get("/comments", async(req , res) => {
+  let data = req.query.bno;
+  res.send(await db.connection("commentList", data));
 });
 
