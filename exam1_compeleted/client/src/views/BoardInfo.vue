@@ -38,7 +38,18 @@
         <!-- 해당 게시글에 댓글이 존재하지 않는다면 -->
         <div v-else class="card text-center">
         <!-- 해당 게시글에 댓글이 존재하지 않는다면 -->
-            댓글업써용
+        <div class="card">
+        <div class="card-header">댓글 목록</div>
+        <div class="card-body">
+            <ul class="list-group">
+                <li class="list-group-item">
+                <div class="container">
+                    댓글 없음
+                </div>
+                </li>
+            </ul>
+        </div>
+    </div>
         </div>
     </div>
 </div>

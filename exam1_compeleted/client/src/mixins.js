@@ -8,7 +8,7 @@ export default {
             let month = ('0' + (date.getMonth() + 1)).slice(-2);
             let day = ('0' + date.getDate()).slice(-2);
 
-            return `${year}-${month}-${day}`;
+            return `${year}년${month}월${day}일`;
         }
     }
 }

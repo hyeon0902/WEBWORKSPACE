@@ -15,7 +15,7 @@
             <textarea id="content" style="height:200px" v-model="boardInfo.content"></textarea>
 
             <label for="regdate">작성일자</label>
-            <input type="text" id="regdate" v-model="boardInfo.created_date" >
+            <input type="text" id="regdate" v-model="boardInfo.created_date" readonly >
 
             <button type="button" class="btn btn-xs btn-info" @click="isUpdated? boardUpdate() : boardInsert()">저장</button>
 
